@@ -1,7 +1,5 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Treesitter
-
+require 'nvim-treesitter.install'.compilers = { "clang" }
 ---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",

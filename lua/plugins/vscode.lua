@@ -37,8 +37,8 @@ if not vim.g.vscode then
         mappings = {
           n = {
             ["<Leader>ff"] = "<CMD>Find<CR>",
-            ["<leader>w"] = "<CMD>Write<CR>",
-            ["<leader>q"] = "<CMD>Quit<CR>",
+            ["<Leader>w"] = "<CMD>Write<CR>",
+            ["<Leader>q"] = "<CMD>Quit<CR>",
             ["\\"] = function()
                 vscode.call('workbench.action.splitEditorRight')
               end,
@@ -51,15 +51,17 @@ if not vim.g.vscode then
             ["<Leader>ls"] = function()
                 vscode.call('workbench.action.gotoSymbol')
               end,
-            ["<leader>zn"] = function()
+            ["<Leader><Leader>z"] = function()
                 vscode.call('workbench.action.toggleZenMode')
               end,
-            ["<leader>e"] = function()
+            ["<Leader>e"] = function()
                 vscode.call('workbench.action.toggleSidebarVisibility')
               end,
-            ["<leader>o"] = function()
+            ["<Leader>o"] = function()
                 vscode.call('workbench.action.focusSideBar')
               end,
+            ["<Leader>]"] = "<CMD>Tabnext<CR>",
+            ["<Leader>["] = "<CMD>Tabprevious<CR>",
             -- ["<leader>o"] = "<CMD>lua require('vscode').call('workbench.action.files.openFile')<CR>",
             -- ["<leader>g"] = "<CMD>lua require('vscode').call('workbench.action.gotoLine')<CR>",
             -- ["<leader>h"] = "<CMD>lua require('vscode').call('workbench.action.navigateBack')<CR>",
