@@ -51,8 +51,11 @@ if not vim.g.vscode then
             ["<Leader>ls"] = function()
                 vscode.call('workbench.action.gotoSymbol')
               end,
-            ["<Leader><Leader>z"] = function()
+            ["<Leader>tz"] = function()
                 vscode.call('workbench.action.toggleZenMode')
+              end,
+            ["<Leader>tb"] = function()
+                vscode.call('extension.toggleBool')
               end,
             ["<Leader>e"] = function()
                 vscode.call('workbench.action.toggleSidebarVisibility')
@@ -60,8 +63,8 @@ if not vim.g.vscode then
             ["<Leader>o"] = function()
                 vscode.call('workbench.action.focusSideBar')
               end,
-            ["<Leader>]"] = "<CMD>Tabnext<CR>",
-            ["<Leader>["] = "<CMD>Tabprevious<CR>",
+            ["t]"] = "<CMD>Tabnext<CR>",
+            ["t["] = "<CMD>Tabprevious<CR>",
             -- ["<leader>o"] = "<CMD>lua require('vscode').call('workbench.action.files.openFile')<CR>",
             -- ["<leader>g"] = "<CMD>lua require('vscode').call('workbench.action.gotoLine')<CR>",
             -- ["<leader>h"] = "<CMD>lua require('vscode').call('workbench.action.navigateBack')<CR>",
