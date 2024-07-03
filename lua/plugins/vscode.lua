@@ -33,7 +33,7 @@ return {
       mappings = {
         n = {
           ["<Leader>ff"] = "<CMD>Find<CR>",
-          ["<Leader>w"] = "<CMD>Write<CR>",
+          -- ["<Leader>w"] = "<CMD>w<CR>",
           ["<Leader>q"] = "<CMD>Quit<CR>",
           ["\\"] = function() vscode.call "workbench.action.splitEditorRight" end,
           ["|"] = function() vscode.call "workbench.action.splitEditorDown" end,
