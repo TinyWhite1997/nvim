@@ -32,6 +32,10 @@ return {
     opts = {
       mappings = {
         n = {
+          ["t"] = function()
+            vscode.call "workbench.action.toggleMaximizedPanel"
+            vscode.call "workbench.action.terminal.focus"
+          end,
           ["\\"] = function() vscode.call "workbench.action.splitEditorRight" end,
           ["|"] = function() vscode.call "workbench.action.splitEditorDown" end,
           ["_"] = "$",
@@ -46,11 +50,9 @@ return {
           ["<Leader>ls"] = function() vscode.call "workbench.action.gotoSymbol" end,
           ["<Leader>o"] = function() vscode.call "workbench.files.action.focusFilesExplorer" end,
           ["<Leader>p"] = function() vscode.call "workbench.action.togglePanel" end,
-          ["<leader>t"] = function()
-            vscode.call "workbench.action.toggleMaximizedPanel"
-            vscode.call "workbench.action.terminal.focus"
-          end,
           ["<Leader>z"] = function() vscode.call "workbench.action.toggleZenMode" end,
+          ["<leader>,"] = "<CMD>normal A,<CR>",
+          ["<leader>;"] = "<CMD>normal A;<CR>",
         },
         v = {
           ["H"] = "5h",
