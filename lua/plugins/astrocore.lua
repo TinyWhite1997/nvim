@@ -44,6 +44,7 @@ return {
       n = {
         -- second key is the lefthand side of the map
 
+        ["s"] = "s",
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
@@ -67,15 +68,18 @@ return {
         ["<Leader><Leader>m"] = { desc = "Markdown" },
         ["<Leader><Leader>mo"] = { function() require("peek").open() end, desc = "Open preview window" },
         ["<Leader><Leader>mc"] = { function() require("peek").close() end, desc = "Close preview window" },
+        ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
       v = {
+        ["s"] = "s",
         ["J"] = "5j",
         ["H"] = "5h",
         ["K"] = "5k",
         ["L"] = "5l",
+        ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
       },
     },
   },

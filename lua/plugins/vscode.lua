@@ -14,6 +14,7 @@ local plugins = {
   "nvim-treesitter-textobjects",
   "nvim-ts-context-commentstring",
   "vscode-multi-cursor.nvim",
+  "hop.nvim",
 }
 local vscode = require "vscode"
 local Config = require "lazy.core.config"
@@ -70,9 +71,9 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = { highlight = { enable = false } },
   },
-  {
-    "vscode-neovim/vscode-multi-cursor.nvim",
-    event = "VeryLazy",
-    opts = function() return opts end,
-  },
+  -- {
+  --   "vscode-neovim/vscode-multi-cursor.nvim",
+  --   event = "VeryLazy",
+  --   opts = function() return opts end,
+  -- },
 }
