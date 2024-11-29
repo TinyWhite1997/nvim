@@ -52,6 +52,7 @@ return {
           ["<Leader>o"] = function() vscode.call "workbench.files.action.focusFilesExplorer" end,
           ["<Leader>p"] = function() vscode.call "workbench.action.togglePanel" end,
           ["<Leader>z"] = function() vscode.call "workbench.action.toggleZenMode" end,
+          ["<Leader>/"] = function() vscode.call "editor.action.addCommentLine" end,
           ["<leader>,"] = "<CMD>normal A,<CR>",
           ["<leader>;"] = "<CMD>normal A;<CR>",
         },
