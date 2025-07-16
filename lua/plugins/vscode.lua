@@ -33,10 +33,7 @@ return {
     opts = {
       mappings = {
         n = {
-          ["t"] = function()
-            vscode.call "workbench.action.toggleMaximizedPanel"
-            vscode.call "workbench.action.terminal.focus"
-          end,
+          ["t"] = function() vscode.call "workbench.action.terminal.focus" end,
           ["\\"] = function() vscode.call "workbench.action.splitEditorRight" end,
           ["|"] = function() vscode.call "workbench.action.splitEditorDown" end,
           ["_"] = "$",
@@ -45,7 +42,7 @@ return {
           ["<Leader>q"] = "<CMD>Quit<CR>",
           ["<Leader>ff"] = "<CMD>Find<CR>",
           ["<Leader>fw"] = function() vscode.call "workbench.action.findInFiles" end,
-          ["<Leader>e"] = function() vscode.call "workbench.action.toggleSidebarVisibility" end,
+          ["<Leader>e"] = function() vscode.call "workbench.files.action.focusOpenEditorsView" end,
           ["<leader>h"] = "<CMD>lua require('vscode').call('workbench.action.navigateBack')<CR>",
           ["<leader>l"] = "<CMD>lua require('vscode').call('workbench.action.navigateForward')<CR>",
           ["<Leader>ls"] = function() vscode.call "workbench.action.gotoSymbol" end,
@@ -55,6 +52,9 @@ return {
           ["<Leader>/"] = function() vscode.call "editor.action.commentLine" end,
           ["<leader>,"] = "<CMD>normal A,<CR>",
           ["<leader>;"] = "<CMD>normal A;<CR>",
+          ["gi"] = function() vscode.call "editor.action.goToImplementation" end,
+          ["gd"] = function() vscode.call "editor.action.revealDefinition" end,
+          ["gf"] = function() vscode.call "editor.action.goToReferences" end,
         },
         v = {
           ["H"] = "5h",
