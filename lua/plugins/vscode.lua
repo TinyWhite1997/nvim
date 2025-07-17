@@ -50,6 +50,12 @@ return {
           ["<Leader>p"] = function() vscode.call "workbench.action.togglePanel" end,
           ["<Leader>z"] = function() vscode.call "workbench.action.toggleZenMode" end,
           ["<Leader>/"] = function() vscode.call "editor.action.commentLine" end,
+          ["<Leader>gg"] = function()
+            vscode.action(
+              "workbench.action.terminal.newWithProfile",
+              { args = { profileName = "lazygit", location = "editor" } }
+            )
+          end,
           ["<leader>,"] = "<CMD>normal A,<CR>",
           ["<leader>;"] = "<CMD>normal A;<CR>",
           ["gi"] = function() vscode.call "editor.action.goToImplementation" end,
