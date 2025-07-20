@@ -57,6 +57,7 @@ return {
       n = {
         -- second key is the lefthand side of the map
 
+        ["s"] = "s",
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
