@@ -15,6 +15,7 @@ local plugins = {
   "nvim-ts-context-commentstring",
   "vscode-multi-cursor.nvim",
   "hop.nvim",
+  "nvim-surround",
 }
 local vscode = require "vscode"
 local Config = require "lazy.core.config"
