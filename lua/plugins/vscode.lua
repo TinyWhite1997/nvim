@@ -27,6 +27,7 @@ Config.options.defaults.cond = function(plugin) return vim.tbl_contains(plugins,
 vim.notify = vscode.notify
 ---@type LazySpec
 return {
+  primaryBarVisible = false,
   -- add a few keybindings
   {
     "AstroNvim/astrocore",
@@ -40,12 +41,17 @@ return {
           ["_"] = "$",
           ["<leader>a"] = function() vscode.call "editor.action.selectAll" end,
           ["<leader>b"] = function() vscode.call "workbench.action.showAllEditors" end,
+          ["<leader>e"] = function()
+            vscode.call "workbench.action.closePanel"
+            vscode.call "workbench.action.closeSidebar"
+            vscode.call "workbench.action.closeAuxiliaryBar"
+          end,
           ["<Leader>q"] = "<CMD>Quit<CR>",
           ["<Leader>ff"] = "<CMD>Find<CR>",
           ["<Leader>fw"] = function() vscode.call "workbench.action.findInFiles" end,
-          ["<Leader>e"] = function() vscode.call "workbench.files.action.focusOpenEditorsView" end,
           ["<leader>h"] = "<CMD>lua require('vscode').call('workbench.action.navigateBack')<CR>",
           ["<leader>l"] = "<CMD>lua require('vscode').call('workbench.action.navigateForward')<CR>",
+          ["<leader>k"] = function() vscode.call "workbench.panel.chat.view.copilot.focus" end,
           ["<Leader>ls"] = function() vscode.call "workbench.action.gotoSymbol" end,
           ["<Leader>o"] = function() vscode.call "workbench.files.action.focusFilesExplorer" end,
           ["<Leader>p"] = function() vscode.call "workbench.action.togglePanel" end,
@@ -57,8 +63,6 @@ return {
               { args = { profileName = "lazygit", location = "editor" } }
             )
           end,
-          ["<leader>,"] = "<CMD>normal A,<CR>",
-          ["<leader>;"] = "<CMD>normal A;<CR>",
           ["gi"] = function() vscode.call "editor.action.goToImplementation" end,
           ["gd"] = function() vscode.call "editor.action.revealDefinition" end,
           ["gf"] = function() vscode.call "editor.action.goToReferences" end,
