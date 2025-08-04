@@ -64,6 +64,8 @@ return {
         ["<leader>,"] = "mzA,<Esc>`z",
         ["<leader>;"] = "mzA;<Esc>`z",
 
+        ["<C-d>"] = "<C-d>",
+
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
           function()
