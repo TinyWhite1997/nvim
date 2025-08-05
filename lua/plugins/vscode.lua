@@ -66,6 +66,8 @@ return {
           ["gi"] = function() vscode.call "editor.action.goToImplementation" end,
           ["gd"] = function() vscode.call "editor.action.revealDefinition" end,
           ["gf"] = function() vscode.call "editor.action.goToReferences" end,
+          ["]e"] = function() vscode.call "editor.action.marker.next" end,
+          ["[e"] = function() vscode.call "editor.action.marker.previous" end,
         },
         v = {
           ["H"] = "5h",
