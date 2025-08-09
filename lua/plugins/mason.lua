@@ -15,6 +15,8 @@ return {
         "tree-sitter-cli",
         "powershell-editor-services",
         "deno",
+        "postgrestools",
+        "pgformatter",
       },
     },
   },
