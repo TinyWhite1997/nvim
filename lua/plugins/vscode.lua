@@ -19,6 +19,7 @@ local plugins = {
 }
 local vscode = require "vscode"
 local Config = require "lazy.core.config"
+cmdHeight = 1
 -- disable plugin update checking
 Config.options.checker.enabled = false
 Config.options.change_detection.enabled = false
