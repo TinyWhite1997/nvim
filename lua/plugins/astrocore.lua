@@ -87,6 +87,13 @@ return {
         ["<Leader><Leader>mc"] = { function() require("peek").close() end, desc = "Close preview window" },
         ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
 
+        ["gh"] = { vim.lsp.buf.hover, desc = "LSP Hover" },
+        ["gd"] = { vim.lsp.buf.definition, desc = "LSP Go to Definition" },
+        ["gD"] = { vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
+        ["gi"] = { vim.lsp.buf.implementation, desc = "LSP Go to Implementation" },
+        ["gr"] = { vim.lsp.buf.references, desc = "LSP List References" },
+        ["F2"] = { vim.lsp.buf.rename, desc = "LSP Rename" },
+
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
       },
@@ -99,7 +106,7 @@ return {
         ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
       },
       i = {
-        ["Left"] = ':copilot#Accept("\\<CR>")',
+        ["Right"] = ':copilot#Accept("\\<CR>")',
       },
     },
   },
