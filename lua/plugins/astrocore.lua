@@ -98,6 +98,9 @@ return {
         ["L"] = "5l",
         ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
       },
+      i = {
+        ["Left"] = ':copilot#Accept("\\<CR>")',
+      },
     },
   },
 }

@@ -9,6 +9,9 @@ return {
     opts = {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
+        "typescript-language-server",
+        "eslint-lsp",
+        "prettier",
         "lua-language-server",
         "stylua",
         "debugpy",
