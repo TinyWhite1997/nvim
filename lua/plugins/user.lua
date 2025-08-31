@@ -82,4 +82,36 @@ return {
       )
     end,
   },
+  {
+    "loctvl842/monokai-pro.nvim",
+    config = function()
+      require("monokai-pro").setup {
+        transparent_background = true,
+        terminal_colors = true,
+        styles = {
+          annotation = { italic = true },
+          tag_attribute = { italic = true },
+        },
+        filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
+        inc_search = "background", -- underline | background
+        background_clear = {
+          "floaters", -- floaters | floats | none
+          "neo-tree",
+          "bufferline",
+        },
+        plugins = {
+          bufferline = {
+            underline_selected = true,
+            bold_selected = true,
+            italic_selected = true,
+          },
+          indent_blankline = {
+            context_highlight = "pro", -- default | pro
+            context_start_underline = true,
+          },
+        },
+      }
+      vim.cmd.colorscheme "monokai-pro"
+    end,
+  },
 }
