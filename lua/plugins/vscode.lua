@@ -66,7 +66,7 @@ return {
           end,
           ["gi"] = function() vscode.call "editor.action.goToImplementation" end,
           ["gd"] = function() vscode.call "editor.action.revealDefinition" end,
-          ["gf"] = function() vscode.call "editor.action.goToReferences" end,
+          ["gr"] = function() vscode.call "editor.action.goToReferences" end,
           ["]e"] = function() vscode.call "go-to-next-error.nextInFiles.error" end,
           ["[e"] = function() vscode.call "go-to-next-error.prevInFiles.error" end,
           ["}e"] = function() vscode.call "go-to-next-error.next.error" end,
