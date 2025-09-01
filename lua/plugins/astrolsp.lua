@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroLSP allows you to customize the features in AstroNvim's LSP configuration engine
 -- Configuration documentation can be found with `:h astrolsp`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -44,7 +42,14 @@ return {
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
     config = {
-      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      ts_ls = {
+        root_dir = require("lspconfig").util.root_pattern { "package.json", "tsconfig.json", "jsconfig.json" },
+        single_file_support = false,
+      },
+      denols = {
+        root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
+        single_file_support = false,
+      },
     },
     -- customize how language servers are attached
     handlers = {
@@ -98,6 +103,16 @@ return {
     -- A custom `on_attach` function to be run after the default `on_attach` function
     -- takes two parameters `client` and `bufnr`  (`:h lspconfig-setup`)
     on_attach = function(client, bufnr)
+      if client.name == "eslint" then
+        -- disable eslint formatting capabilities, use null-ls for formatting
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+      end
+      if client.name == "ts_ls" then
+        -- disable tsserver formatting capabilities, use null-ls for formatting
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+      end
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
     end,
