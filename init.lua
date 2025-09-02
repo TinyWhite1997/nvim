@@ -23,5 +23,24 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+vim.api.nvim_set_hl(0, "RenderMarkdownH1", { bg = "#ffd6cc", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH2", { bg = "#e0f2fe", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH3", { bg = "#d5f5e3", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH4", { bg = "#fdebd0", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH5", { bg = "#e8daef", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH6", { bg = "#f2f3f4", bold = true })
+vim.api.nvim_set_hl(0, "@markup.heading.1.markdown", { link = "RenderMarkdownH1" })
+vim.api.nvim_set_hl(0, "@markup.heading.2.markdown", { link = "RenderMarkdownH2" })
+vim.api.nvim_set_hl(0, "@markup.heading.3.markdown", { link = "RenderMarkdownH3" })
+vim.api.nvim_set_hl(0, "@markup.heading.4.markdown", { link = "RenderMarkdownH4" })
+vim.api.nvim_set_hl(0, "@markup.heading.5.markdown", { link = "RenderMarkdownH5" })
+vim.api.nvim_set_hl(0, "@markup.heading.6.markdown", { link = "RenderMarkdownH6" })
+vim.api.nvim_set_hl(0, "RenderMarkdownH1Bg", { bg = "#8c3c2d", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH2Bg", { bg = "#0b4d80", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = "#1c553b", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = "#7e6000", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH5Bg", { bg = "#4a235a", bold = true })
+vim.api.nvim_set_hl(0, "RenderMarkdownH6Bg", { bg = "#566573", bold = true })
+
 require "lazy_setup"
 require "polish"

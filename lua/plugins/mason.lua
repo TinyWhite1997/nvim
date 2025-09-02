@@ -9,6 +9,7 @@ return {
     opts = {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
+        "marksman",
         "typescript-language-server",
         "prettier",
         "lua-language-server",

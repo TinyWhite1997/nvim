@@ -9,6 +9,11 @@ return {
     ensure_installed = {
       "lua",
       "vim",
+      "markdown",
+      "markdown_inline",
+      "html",
+      "latex",
+      "yaml",
       -- add more arguments for adding more treesitter parsers
     },
   },
