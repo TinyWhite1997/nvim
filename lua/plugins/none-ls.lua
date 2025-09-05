@@ -16,7 +16,7 @@ return {
     opts.sources = require("astrocore").list_insert_unique(opts.sources, {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
-      null_ls.builtins.formatting.prettierd,
+      -- null_ls.builtins.formatting.prettierd,
       -- require "none-ls.diagnostics.eslint",
     })
   end,

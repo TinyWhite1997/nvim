@@ -14,5 +14,13 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.motion.mini-jump" },
+  { import = "astrocommunity.pack.cs-omnisharp" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.xml" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.typescript-deno" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
+  { import = "astrocommunity.pack.ps1" },
+  { import = "astrocommunity.pack.prettier" },
   -- import/override with your plugins folder
 }
