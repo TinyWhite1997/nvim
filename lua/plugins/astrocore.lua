@@ -85,17 +85,10 @@ return {
         ["<Leader><Leader>m"] = { desc = "Markdown" },
         ["<Leader><Leader>mo"] = { function() require("peek").open() end, desc = "Open preview window" },
         ["<Leader><Leader>mc"] = { function() require("peek").close() end, desc = "Close preview window" },
-        ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
+        ["<Leader><Leader>w"] = "<CMD>HopWord<CR>",
 
         ["gh"] = { vim.lsp.buf.hover, desc = "LSP Hover" },
-        ["gd"] = { vim.lsp.buf.definition, desc = "LSP Go to Definition" },
-        ["gD"] = { vim.lsp.buf.declaration, desc = "LSP Go to Declaration" },
-        ["gi"] = { vim.lsp.buf.implementation, desc = "LSP Go to Implementation" },
-        ["gr"] = { vim.lsp.buf.references, desc = "LSP List References" },
         ["F2"] = { vim.lsp.buf.rename, desc = "LSP Rename" },
-
-        -- setting a mapping to false will disable it
-        -- ["<C-S>"] = false,
       },
       v = {
         ["s"] = "s",
@@ -103,7 +96,6 @@ return {
         ["H"] = "5h",
         ["K"] = "5k",
         ["L"] = "5l",
-        ["<Leader><Leader>w"] = { function() require("hop").hint_words() end, desc = "Hop hint words" },
       },
       i = {
         ["Right"] = ':copilot#Accept("\\<CR>")',

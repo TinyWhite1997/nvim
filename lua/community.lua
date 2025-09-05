@@ -12,5 +12,7 @@ return {
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.recipes.picker-lsp-mappings" },
+  { import = "astrocommunity.motion.mini-jump" },
   -- import/override with your plugins folder
 }
