@@ -50,12 +50,40 @@ return {
         root_dir = require("lspconfig").util.root_pattern("deno.json", "deno.jsonc"),
         single_file_support = false,
       },
+      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      powershell_es = {
+        cmd = {
+          "pwsh",
+          "-NoLogo",
+          "-NoProfile",
+          "-Command",
+          "C:\\Users\\weikaifu\\AppData\\Local\\nvim-data\\mason\\packages\\powershell-editor-services\\PowerShellEditorServices\\Start-EditorServices.ps1",
+          "-BundledModulesPath",
+          "C:\\Users\\weikaifu\\AppData\\Local\\nvim-data\\mason\\packages\\powershell-editor-services\\PowerShellEditorServices",
+          "-SessionDetailsPath",
+          "c:/tmp/pses-session.json",
+          "-LogPath",
+          "c:/tmp/pses.log",
+          "-FeatureFlags",
+          "@()",
+          "-AdditionalModules",
+          "@()",
+          "-HostName",
+          "nvim",
+          "-HostProfileId",
+          "0",
+          "-HostVersion",
+          "1.0.0",
+          "-Stdio",
+        },
+        filetypes = { "ps1", "psm1" },
+      },
+      -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached
     handlers = {
       -- a function without a key is simply the default handler, functions take two parameters, the server name and the configured options table for that server
       -- function(server, opts) require("lspconfig")[server].setup(opts) end
-
       -- the key is the server that is being setup with `lspconfig`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
