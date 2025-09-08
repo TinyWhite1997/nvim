@@ -14,7 +14,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.motion.mini-jump" },
-  { import = "astrocommunity.pack.cs-omnisharp" },
+  -- { import = "astrocommunity.pack.cs-omnisharp" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.xml" },
   { import = "astrocommunity.pack.typescript" },

@@ -59,10 +59,9 @@ return {
           ["<Leader>z"] = function() vscode.call "workbench.action.toggleZenMode" end,
           ["<Leader>/"] = function() vscode.call "editor.action.commentLine" end,
           ["<Leader>gg"] = function()
-            vscode.action(
-              "workbench.action.terminal.newWithProfile",
-              { args = { profileName = "lazygit", location = "editor" } }
-            )
+            local path = vscode.eval "return vscode.workspace.rootPath"
+            local cmd = string.format('wt -M -d "%s" lazygit', path)
+            os.execute(cmd)
           end,
           ["gi"] = function() vscode.call "editor.action.goToImplementation" end,
           ["gd"] = function() vscode.call "editor.action.revealDefinition" end,
