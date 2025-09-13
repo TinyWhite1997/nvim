@@ -61,6 +61,8 @@ return {
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<C-]>"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
+        ["<C-[>"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
         ["<leader>,"] = "mzA,<Esc>`z",
         ["<leader>;"] = "mzA;<Esc>`z",
 
@@ -86,9 +88,6 @@ return {
         ["<Leader><Leader>mo"] = { function() require("peek").open() end, desc = "Open preview window" },
         ["<Leader><Leader>mc"] = { function() require("peek").close() end, desc = "Close preview window" },
         ["<Leader><Leader>w"] = "<CMD>HopWord<CR>",
-
-        ["gh"] = { vim.lsp.buf.hover, desc = "LSP Hover" },
-        ["F2"] = { vim.lsp.buf.rename, desc = "LSP Rename" },
       },
       v = {
         ["s"] = "s",
