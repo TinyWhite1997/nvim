@@ -42,5 +42,20 @@ vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = "#7e6000", bold = true })
 vim.api.nvim_set_hl(0, "RenderMarkdownH5Bg", { bg = "#4a235a", bold = true })
 vim.api.nvim_set_hl(0, "RenderMarkdownH6Bg", { bg = "#566573", bold = true })
 
-require "lazy_setup"
+if vim.fn.has "win32" then
+  require "lazy_setup"
+  local powershell_options = {
+    shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
+    shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+    shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+    shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+    shellquote = "",
+    shellxquote = "",
+  }
+
+  for option, value in pairs(powershell_options) do
+    vim.opt[option] = value
+  end
+end
+
 require "polish"
