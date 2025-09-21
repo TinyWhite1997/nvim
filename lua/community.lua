@@ -7,7 +7,6 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.colorscheme.monokai-pro-nvim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.editing-support.copilotchat-nvim" },
   { import = "astrocommunity.fuzzy-finder.snacks-picker" },
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
   { import = "astrocommunity.markdown-and-latex.peek-nvim" },
