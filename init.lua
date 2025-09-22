@@ -42,8 +42,8 @@ vim.api.nvim_set_hl(0, "RenderMarkdownH4Bg", { bg = "#7e6000", bold = true })
 vim.api.nvim_set_hl(0, "RenderMarkdownH5Bg", { bg = "#4a235a", bold = true })
 vim.api.nvim_set_hl(0, "RenderMarkdownH6Bg", { bg = "#566573", bold = true })
 
-if vim.fn.has "win32" then
-  require "lazy_setup"
+require "lazy_setup"
+if vim.fn.has "win32" == 1 or vim.fn.has "win64" == 1 then
   local powershell_options = {
     shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
     shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
