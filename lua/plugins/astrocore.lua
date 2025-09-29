@@ -87,7 +87,11 @@ return {
         ["<Leader><Leader>m"] = { desc = "Markdown" },
         ["<Leader><Leader>mo"] = { function() require("peek").open() end, desc = "Open preview window" },
         ["<Leader><Leader>mc"] = { function() require("peek").close() end, desc = "Close preview window" },
-        ["<Leader><Leader>w"] = "<CMD>HopWord<CR>",
+        ["<Leader><Leader>w"] = { "<CMD>HopWord<CR>", desc = "Hop to word" },
+
+        ["<Leader>tr"] = { ":ToggleTermSetName<CR>", desc = "Rename terminal" },
+        ["<Leader>to"] = { ":TermSelect<CR>", desc = "Pick a terminal" },
+        ["<Leader>ti"] = { ":TermNew<CR>", desc = "New terminal" },
       },
       v = {
         ["s"] = "s",
