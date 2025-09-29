@@ -58,4 +58,9 @@ if vim.fn.has "win32" == 1 or vim.fn.has "win64" == 1 then
   end
 end
 
+if vim.g.neovide then
+  vim.g.neovide_cursor_vfx_mode = "railgun"
+  vim.g.neovide_fullscreen = true
+end
+
 require "polish"
