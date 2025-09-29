@@ -20,6 +20,7 @@ return {
     "CopilotChatTests",
     "CopilotChatCommit",
   },
+
   dependencies = {
     { "nvim-lua/plenary.nvim" },
     {
@@ -106,11 +107,8 @@ return {
   opts = {
     model = "gpt-5",
     window = {
-      layout = "float",
-      width = 0.8,
-      height = 0.8,
-      border = "rounded",
+      layout = "vertical",
+      width = 0.4,
     },
-    auto_insert_mode = true,
   },
 }
