@@ -92,11 +92,6 @@ return {
     -- A custom `on_attach` function to be run after the default `on_attach` function
     -- takes two parameters `client` and `bufnr`  (`:h lspconfig-setup`)
     on_attach = function(client, bufnr)
-      if client.name == "eslint" then
-        -- disable eslint formatting capabilities, use null-ls for formatting
-        client.server_capabilities.documentFormattingProvider = false
-        client.server_capabilities.documentRangeFormattingProvider = false
-      end
       if client.name == "ts_ls" then
         -- disable tsserver formatting capabilities, use null-ls for formatting
         client.server_capabilities.documentFormattingProvider = false
